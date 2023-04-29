@@ -10,10 +10,10 @@ app = Quart(__name__)
 quart_cors.cors(app, allow_origin="https://chat.openai.com")
 
 # Set API Keys
-OPENAI_API_KEY = ""
-PINECONE_API_KEY = ""
-GOOGLE_API_KEY = ""
-CUSTOM_SEARCH_ENGINE_ID = ""
+OPENAI_API_KEY = "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"
+PINECONE_API_KEY = "683eb371-d8af-40eb-8217-2bea0eb34f86"
+GOOGLE_API_KEY = "64782a19af33e4f19"
+CUSTOM_SEARCH_ENGINE_ID = "AIzaSyBdlv2lB7vvHY_xXqyRREtZkjEeSYcedlQ"
 
 
 class BabyAGI:
@@ -23,8 +23,8 @@ class BabyAGI:
                pinecone_api_key,
                google_api_key,
                custom_search_engine_id,
-               pinecone_environment="us-central1-gcp",
-               table_name="test-table",
+               pinecone_environment="us-west1-gcp",
+               table_name="chatgpt-babyagi-plugin",
                first_task="Develop a task list"):
     self.openai_api_key = openai_api_key
     self.pinecone_api_key = pinecone_api_key
